@@ -24,16 +24,10 @@ Route::get('/', function () {
 });
 
 // single listing
-Route::get('/listings/{id}', function(string $id) {
-    $listing = Listing::find($id);
-
-    if (!$listing) {
-        abort('404');
-    } else {
-        return view('listing', [
-            'listing' => Listing::find($id)
-        ]);
-    }
+Route::get('/listings/{listing}', function(Listing $listing) {
+    return view('listing', [
+        'listing' => $listing
+    ]);
 });
 
 // can pass through data to view manually from here

@@ -1,8 +1,9 @@
 <h1>listings</h1>
-{{ $heading }}
+{{ $heading }}<br>
 @foreach ($listings as $listing)
 <a href="/listings/{{$listing['id']}}">
-    {{ $listing['id'] }}
+    {{ $listing['title'] }}<br>
+    {{ $listing['company'] }}
 </a>
 @endforeach
 {{-- blade allows us to use twig syntax  --}}

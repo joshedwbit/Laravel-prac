@@ -2,44 +2,12 @@
 
 namespace App\Models;
 
-/**
- * Listings model
- */
-class Listing
-{
-    /**
-     * return all listings
-     *
-     * @return array
-     */
-    public static function all()
-    {
-        return [
-            [
-                'id' => 1
-            ],
-            [
-                'id' => 2
-            ],
-            [
-                'id' => 3
-            ]
-        ];
-    }
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-    /**
-     * find a specific listing
-     *
-     * @param integer $id
-     * @return array
-     */
-    public static function find(int $id)
-    {
-        $listings = self::all();
-        foreach ($listings as $listing) {
-            if ($listing['id'] == $id) {
-                return $listing;
-            }
-        }
-    }
+class Listing extends Model
+{
+    use HasFactory;
+    // created instead using php artisan make:model Listing
+    // extends parent Model which has a load of methods
 }

@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-
+@include('partials._search')
 <h1>listings</h1>
 {{ $heading }}<br>
 @foreach ($listings as $listing)

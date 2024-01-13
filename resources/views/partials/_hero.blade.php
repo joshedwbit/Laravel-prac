@@ -1,0 +1,1 @@
+<h2 style="background-color: blue">this is a partial</h2>

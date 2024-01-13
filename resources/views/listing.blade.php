@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-<img src="{{ asset('images/logo.png') }}"  alt="logo-image"/>
 @include('partials._hero')
 @include('partials._search')
 <h1>single listing</h1>

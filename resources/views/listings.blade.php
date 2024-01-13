@@ -5,8 +5,8 @@
 {{ $heading }}<br>
 @foreach ($listings as $listing)
 <a href="/listings/{{$listing['id']}}">
-    {{ $listing['title'] }}<br>
-    {{ $listing['company'] }}<br>
+    {{ $listing->title }}<br>
+    {{ $listing->company }}<br>
 </a>
 <br>
 @endforeach

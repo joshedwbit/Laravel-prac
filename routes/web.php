@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Listings',
+    ]);
 });
+// can pass through data to view manually from here
 
 // Route::get('/hello', function() {
 //     return response('Hello World', 200);

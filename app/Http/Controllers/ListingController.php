@@ -18,6 +18,7 @@ class ListingController extends Controller
             'heading' => 'Latest Listings',
             'listings' => Listing::all()
         ]);
+        // can also use Listing::Latest to retrieve latest
     }
 
     /**
@@ -30,5 +31,13 @@ class ListingController extends Controller
         return view('listings.show', [
             'listing' => $listing
         ]);
+    }
+
+    /**
+     * show create form
+     */
+    public function create()
+    {
+        return view('listings.create');
     }
 }

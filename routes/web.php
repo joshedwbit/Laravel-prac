@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// all listings
+Route::get('/', [ListingController::class, 'index']);
+
+// show create form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// Store listing data
+Route::post('/listings', [ListingController::class, 'store']);
+
+
+// single listing
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// can pass through data to view manually from here
+
+// Route::get('/hello', function() {
+//     return response('Hello World', 200);
+// });
+
+// Route::get('/posts/{id}', function($id) {
+//     ddd($id);
+//     return response('Post ' . $id);
+// })->where('id', '[0-9]+');
+
+// Route::get('/search', function(Request $request) {
+//     return $request->name . ' ' . $request->city;
+// });
+// i.e. /search?name=John&city=London
+// specifying an argument of the request class allows us to
+// pull out params from url

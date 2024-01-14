@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Listing extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'company',
+        'location',
+        'website',
+        'email',
+        'description',
+        'tags'
+    ];
     // created instead using php artisan make:model Listing
     // extends parent Model which has a load of methods
 }

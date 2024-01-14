@@ -59,6 +59,7 @@ class ListingController extends Controller
             'tags' => 'required',
             'description' => 'required'
         ]);
+        // html fields need names for required to work properly
 
         Listing::create($formFields);
 

@@ -9,6 +9,6 @@
 <body>
     <h1 class="">Default Layout</h1>
     {{-- --- view output --- --}}
-    @yield('content')
+    {{$slot}}
 </body>
 </html>

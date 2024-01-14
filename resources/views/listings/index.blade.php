@@ -1,5 +1,4 @@
-@extends('layout')
-@section('content')
+<x-layout>
 @include('partials._hero')
 <h1>listings</h1>
 {{ $heading }}<br>
@@ -10,4 +9,4 @@
 
 <!-- usual logic can go here, i.e. foreach to pull from arrays  -->
 
-@endsection
+</x-layout>
